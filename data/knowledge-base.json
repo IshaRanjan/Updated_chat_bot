@@ -1,0 +1,771 @@
+{
+  "id": "root",
+  "type": "category",
+  "message": "Welcome to MoodScale. How can we help you today?",
+  "children": [
+    {
+      "id": "services",
+      "label": "Services",
+      "description": "Therapy, wellness programs, and organizational solutions",
+      "redirectUrl": "https://moodscale.in/#services",
+      "children": [
+        {
+          "id": "services_therapy",
+          "label": "Therapy Services",
+          "description": "One-on-one, couples, group, and consultation",
+          "children": [
+            {
+              "id": "individual_therapy",
+              "label": "Individual Therapy",
+              "description": "Personalized one-on-one mental health support",
+              "redirectUrl": "https://moodscale.in/services/individual-therapy",
+              "children": [
+                {
+                  "id": "individual_what",
+                  "type": "faq",
+                  "title": "What is Individual Therapy?",
+                  "message": "Individual therapy is a collaborative process between you and a licensed mental health professional. It provides a safe, confidential space to explore thoughts, feelings, and behaviors while developing coping strategies.",
+                  "redirectUrl": "https://moodscale.in/services/individual-therapy"
+                },
+                {
+                  "id": "individual_approach",
+                  "type": "faq",
+                  "title": "What therapeutic approaches are used?",
+                  "message": "Our therapists use evidence-based techniques including CBT, DBT, and mindfulness-based interventions. Each treatment plan is customized to your unique concerns and goals.",
+                  "redirectUrl": "https://moodscale.in/services/individual-therapy"
+                },
+                {
+                  "id": "individual_benefit",
+                  "type": "faq",
+                  "title": "Who can benefit from individual therapy?",
+                  "message": "Individual therapy can help with anxiety, depression, trauma, relationship issues, life transitions, stress management, and personal growth.",
+                  "redirectUrl": "https://moodscale.in/services/individual-therapy"
+                },
+                {
+                  "id": "individual_expect",
+                  "type": "faq",
+                  "title": "What should I expect in sessions?",
+                  "message": "Your first session includes a comprehensive assessment. Regular sessions last 50 minutes, typically weekly or bi-weekly. Sessions are available online or in-person.",
+                  "redirectUrl": "https://moodscale.in/services/individual-therapy"
+                },
+                {
+                  "id": "individual_pricing",
+                  "type": "faq",
+                  "title": "How much does individual therapy cost?",
+                  "message": "Individual therapy sessions start at ₹2,500 per session. Package deals for multiple sessions are available. Contact us to discuss payment plans.",
+                  "redirectUrl": "https://moodscale.in/services/individual-therapy"
+                }
+              ]
+            },
+            {
+              "id": "couples_therapy",
+              "label": "Couples Therapy",
+              "description": "Strengthen your relationship through professional guidance",
+              "redirectUrl": "https://moodscale.in/services/couples-therapy",
+              "children": [
+                {
+                  "id": "couples_what",
+                  "type": "faq",
+                  "title": "What is Couples Therapy?",
+                  "message": "Couples therapy helps partners improve their relationship through structured sessions. You learn to communicate effectively, resolve conflicts, and deepen emotional connection.",
+                  "redirectUrl": "https://moodscale.in/services/couples-therapy"
+                },
+                {
+                  "id": "couples_approach",
+                  "type": "faq",
+                  "title": "What approaches do you use?",
+                  "message": "We use evidence-based methods including Emotionally Focused Therapy (EFT) and the Gottman Method in a neutral, supportive environment.",
+                  "redirectUrl": "https://moodscale.in/services/couples-therapy"
+                },
+                {
+                  "id": "couples_issues",
+                  "type": "faq",
+                  "title": "What issues can couples therapy address?",
+                  "message": "We help with communication difficulties, trust issues, intimacy concerns, conflict resolution, life transitions, parenting disagreements, and financial stress.",
+                  "redirectUrl": "https://moodscale.in/services/couples-therapy"
+                },
+                {
+                  "id": "couples_expect",
+                  "type": "faq",
+                  "title": "What should we expect in sessions?",
+                  "message": "Initial sessions explore your relationship history and goals. Sessions last 60–90 minutes with both partners. Progress is reviewed regularly.",
+                  "redirectUrl": "https://moodscale.in/services/couples-therapy"
+                },
+                {
+                  "id": "couples_pricing",
+                  "type": "faq",
+                  "title": "How much does couples therapy cost?",
+                  "message": "Couples therapy sessions start at ₹3,500 per session. Package options and extended sessions are available. Same pricing applies for individuals and couples on platform plans.",
+                  "redirectUrl": "https://moodscale.in/services/couples-therapy"
+                }
+              ]
+            },
+            {
+              "id": "group_therapy",
+              "label": "Group Therapy",
+              "description": "Healing and growth through shared experiences",
+              "redirectUrl": "https://moodscale.in/services/group-therapy",
+              "children": [
+                {
+                  "id": "group_what",
+                  "type": "faq",
+                  "title": "What is Group Therapy?",
+                  "message": "Group therapy brings together individuals facing similar challenges with professional guidance. It provides peer support, diverse perspectives, and a safe, confidential environment.",
+                  "redirectUrl": "https://moodscale.in/services/group-therapy"
+                },
+                {
+                  "id": "group_benefits",
+                  "type": "faq",
+                  "title": "What are the benefits of group therapy?",
+                  "message": "Benefits include reduced isolation, validation through shared experiences, learning from others' coping strategies, and developing interpersonal skills.",
+                  "redirectUrl": "https://moodscale.in/services/group-therapy"
+                },
+                {
+                  "id": "group_types",
+                  "type": "faq",
+                  "title": "What types of groups are offered?",
+                  "message": "Groups cover anxiety and depression support, grief and loss, addiction recovery, trauma healing, social skills development, and stress management.",
+                  "redirectUrl": "https://moodscale.in/services/group-therapy"
+                },
+                {
+                  "id": "group_how",
+                  "type": "faq",
+                  "title": "How do groups work?",
+                  "message": "Groups have 6–10 members meeting weekly for 90-minute sessions. Facilitators lead structured discussions, exercises, and skill-building activities.",
+                  "redirectUrl": "https://moodscale.in/services/group-therapy"
+                },
+                {
+                  "id": "group_pricing",
+                  "type": "faq",
+                  "title": "How much does group therapy cost?",
+                  "message": "Group therapy sessions are ₹1,500 per session. Most groups require a minimum 8-week commitment. Contact us for current group openings.",
+                  "redirectUrl": "https://moodscale.in/services/group-therapy"
+                }
+              ]
+            },
+            {
+              "id": "psychological_consultation",
+              "label": "Psychological Consultation",
+              "description": "Professional evaluation by licensed psychologists",
+              "redirectUrl": "https://moodscale.in/services/psychiatric-consultation",
+              "children": [
+                {
+                  "id": "psych_what",
+                  "type": "faq",
+                  "title": "What is Psychological Consultation?",
+                  "message": "Psychological consultation involves comprehensive evaluation by a licensed psychologist to assess and address mental health conditions using evidence-based interventions and testing.",
+                  "redirectUrl": "https://moodscale.in/services/psychiatric-consultation"
+                },
+                {
+                  "id": "psych_services",
+                  "type": "faq",
+                  "title": "What services are provided?",
+                  "message": "Services include diagnostic evaluation, psychological testing, treatment planning, psychotherapy, and coordination with other healthcare providers.",
+                  "redirectUrl": "https://moodscale.in/services/psychiatric-consultation"
+                },
+                {
+                  "id": "psych_when",
+                  "type": "faq",
+                  "title": "When should I seek psychological consultation?",
+                  "message": "Consider it for persistent mental health symptoms, psychological assessment needs, evidence-based therapy, or complex conditions requiring specialized expertise.",
+                  "redirectUrl": "https://moodscale.in/services/psychiatric-consultation"
+                },
+                {
+                  "id": "psych_process",
+                  "type": "faq",
+                  "title": "What happens in the initial consultation?",
+                  "message": "The first appointment lasts 60–90 minutes and includes evaluation, history review, symptom assessment, and initial treatment recommendations.",
+                  "redirectUrl": "https://moodscale.in/services/psychiatric-consultation"
+                },
+                {
+                  "id": "psych_pricing",
+                  "type": "faq",
+                  "title": "How much does psychological consultation cost?",
+                  "message": "Initial consultations are ₹3,500, with follow-up sessions at ₹2,000. Contact us to discuss payment options and package deals.",
+                  "redirectUrl": "https://moodscale.in/services/psychiatric-consultation"
+                }
+              ]
+            },
+            {
+              "id": "corporate_pricing",
+              "label": "Corporate & Bulk Pricing",
+              "description": "Mental health solutions for organizations",
+              "redirectUrl": "https://moodscale.in/services/custom-pricing",
+              "children": [
+                {
+                  "id": "corp_what",
+                  "type": "faq",
+                  "title": "What corporate programs does MoodScale offer?",
+                  "message": "We offer Employee Assistance Programs, executive wellness packages, team workshops, and bulk session packages tailored to organizations of all sizes.",
+                  "redirectUrl": "https://moodscale.in/services/custom-pricing"
+                },
+                {
+                  "id": "corp_eap",
+                  "type": "faq",
+                  "title": "What is included in the EAP?",
+                  "message": "EAP includes 24/7 crisis helpline access, unlimited email support, monthly wellness webinars, quarterly assessments, and dedicated therapist matching. Packages start from ₹500/employee/month for 50+ employees.",
+                  "redirectUrl": "https://moodscale.in/services/custom-pricing"
+                },
+                {
+                  "id": "corp_bulk",
+                  "type": "faq",
+                  "title": "What bulk pricing discounts are available?",
+                  "message": "Volume discounts: 20% off for 10–25 sessions, 30% for 26–50, 35% for 51–100, and up to 45% off for 100+ sessions with custom enterprise pricing.",
+                  "redirectUrl": "https://moodscale.in/services/custom-pricing"
+                },
+                {
+                  "id": "corp_workshops",
+                  "type": "faq",
+                  "title": "Do you offer team workshops?",
+                  "message": "Yes. Workshop topics include stress management, psychological safety, communication skills, workplace anxiety, and building mentally healthy teams for 10–500 participants.",
+                  "redirectUrl": "https://moodscale.in/services/custom-pricing"
+                },
+                {
+                  "id": "corp_quote",
+                  "type": "faq",
+                  "title": "How do I get a custom corporate quote?",
+                  "message": "Submit your organization details on our custom pricing page. Our team will contact you within 24 hours with a tailored proposal.",
+                  "redirectUrl": "https://moodscale.in/services/custom-pricing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "services_features",
+          "label": "Features & Programs",
+          "description": "Personal growth, wellness centers, and nature retreats",
+          "children": [
+            {
+              "id": "personal_growth",
+              "label": "Personal Growth & Development",
+              "redirectUrl": "https://moodscale.in/features/personal-growth",
+              "children": [
+                {
+                  "id": "growth_what",
+                  "type": "faq",
+                  "title": "What is Personal Growth & Development?",
+                  "message": "Evidence-based personal development programs combining academic excellence, professional growth, and life skills mastery to help you achieve your goals.",
+                  "redirectUrl": "https://moodscale.in/features/personal-growth"
+                },
+                {
+                  "id": "growth_goal",
+                  "type": "faq",
+                  "title": "What is Goal Achievement Mastery?",
+                  "message": "A strategic goal-setting framework using SMART methodology, weekly accountability sessions, and a performance metrics dashboard to track progress.",
+                  "redirectUrl": "https://moodscale.in/features/personal-growth"
+                },
+                {
+                  "id": "growth_academic",
+                  "type": "faq",
+                  "title": "What is the Academic Excellence Program?",
+                  "message": "Enhance learning with neuroscience-based study methods, memory optimization techniques, and focus enhancement training tailored to your learning style.",
+                  "redirectUrl": "https://moodscale.in/features/personal-growth"
+                },
+                {
+                  "id": "growth_career",
+                  "type": "faq",
+                  "title": "What is Career Development & Leadership?",
+                  "message": "Accelerate professional growth with executive coaching, professional communication training, and strategic networking for career advancement.",
+                  "redirectUrl": "https://moodscale.in/features/personal-growth"
+                },
+                {
+                  "id": "growth_start",
+                  "type": "faq",
+                  "title": "How do I get started?",
+                  "message": "Begin with a free assessment or schedule a consultation to explore which personal development program fits your goals.",
+                  "redirectUrl": "https://moodscale.in/features/personal-growth"
+                }
+              ]
+            },
+            {
+              "id": "wellness_centers",
+              "label": "Holistic Wellness Centers",
+              "redirectUrl": "https://moodscale.in/features/wellness-centers",
+              "children": [
+                {
+                  "id": "wellness_what",
+                  "type": "faq",
+                  "title": "What are Holistic Wellness Centers?",
+                  "message": "State-of-the-art centers offering integrated programs combining traditional wisdom and modern therapeutic approaches for complete well-being.",
+                  "redirectUrl": "https://moodscale.in/features/wellness-centers"
+                },
+                {
+                  "id": "wellness_yoga",
+                  "type": "faq",
+                  "title": "What is Yoga & Movement Therapy?",
+                  "message": "Therapeutic yoga, somatic movement, and breathwork sessions designed to release tension, build resilience, and restore inner balance.",
+                  "redirectUrl": "https://moodscale.in/features/wellness-centers"
+                },
+                {
+                  "id": "wellness_group",
+                  "type": "faq",
+                  "title": "What group programs are available?",
+                  "message": "Anxiety support groups, mindfulness circles, and peer support networks in a safe, facilitated environment.",
+                  "redirectUrl": "https://moodscale.in/features/wellness-centers"
+                },
+                {
+                  "id": "wellness_integrative",
+                  "type": "faq",
+                  "title": "What integrative therapies are offered?",
+                  "message": "Art and music therapy, nutritional counseling, and biofeedback training for comprehensive mind-body wellness.",
+                  "redirectUrl": "https://moodscale.in/features/wellness-centers"
+                },
+                {
+                  "id": "wellness_start",
+                  "type": "faq",
+                  "title": "How do I begin my wellness journey?",
+                  "message": "Visit our wellness centers page to explore programs and connect with our team to find the right program for you.",
+                  "redirectUrl": "https://moodscale.in/features/wellness-centers"
+                }
+              ]
+            },
+            {
+              "id": "nature_retreat",
+              "label": "Nature Retreat Experience",
+              "redirectUrl": "https://moodscale.in/features/nature-retreat",
+              "children": [
+                {
+                  "id": "retreat_what",
+                  "type": "faq",
+                  "title": "What is the Nature Retreat Experience?",
+                  "message": "Transformative nature retreats in carefully selected sanctuaries combining therapeutic benefits of natural environments with evidence-based mental wellness practices.",
+                  "redirectUrl": "https://moodscale.in/features/nature-retreat"
+                },
+                {
+                  "id": "retreat_forest",
+                  "type": "faq",
+                  "title": "What are Forest Therapy Sessions?",
+                  "message": "Guided forest meditation, sensory awareness walks, and nature connection rituals using scientifically-proven forest bathing techniques.",
+                  "redirectUrl": "https://moodscale.in/features/nature-retreat"
+                },
+                {
+                  "id": "retreat_mountain",
+                  "type": "faq",
+                  "title": "What are Mountain Meditation Retreats?",
+                  "message": "High-altitude retreats with silent meditation, sunrise yoga sessions, and peak mindfulness practices for clarity and renewal.",
+                  "redirectUrl": "https://moodscale.in/features/nature-retreat"
+                },
+                {
+                  "id": "retreat_coastal",
+                  "type": "faq",
+                  "title": "What are Coastal Wellness Experiences?",
+                  "message": "Ocean sound therapy, beach meditation walks, and tidal breathing exercises harnessing the therapeutic power of marine environments.",
+                  "redirectUrl": "https://moodscale.in/features/nature-retreat"
+                },
+                {
+                  "id": "retreat_start",
+                  "type": "faq",
+                  "title": "How do I join a nature retreat?",
+                  "message": "Explore retreat programs on our Nature Retreat page and contact our team to learn about upcoming experiences.",
+                  "redirectUrl": "https://moodscale.in/features/nature-retreat"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "therapists",
+      "label": "Find a Therapist",
+      "description": "Browse certified mental health professionals",
+      "redirectUrl": "https://moodscale.in/therapists",
+      "children": [
+        {
+          "id": "therapists_who",
+          "type": "faq",
+          "title": "Who are MoodScale therapists?",
+          "message": "All therapists are licensed mental health professionals with extensive training. They hold relevant degrees in psychology, counseling, or related fields and are certified practitioners.",
+          "redirectUrl": "https://moodscale.in/therapists"
+        },
+        {
+          "id": "therapists_browse",
+          "type": "faq",
+          "title": "How do I browse therapists?",
+          "message": "Visit our Therapists page to browse certified mental health professionals and find the expert who's right for your journey.",
+          "redirectUrl": "https://moodscale.in/therapists"
+        },
+        {
+          "id": "therapists_match",
+          "type": "faq",
+          "title": "How does therapist matching work?",
+          "message": "Our platform offers expert therapist matching based on your needs. After assessment, we help connect you with the right professional for your goals.",
+          "redirectUrl": "https://moodscale.in/therapists"
+        },
+        {
+          "id": "therapists_book",
+          "type": "faq",
+          "title": "How do I book a session?",
+          "message": "Book a session through our platform after browsing therapists. Flexible scheduling with online and in-person options is available.",
+          "redirectUrl": "https://moodscale.in/sessions/book-with-therapist"
+        },
+        {
+          "id": "therapists_format",
+          "type": "faq",
+          "title": "Are sessions online or in-person?",
+          "message": "Therapy sessions are available both online and in-person based on your preference. All sessions are conducted in a confidential environment.",
+          "redirectUrl": "https://moodscale.in/therapists"
+        },
+        {
+          "id": "therapists_journey",
+          "type": "faq",
+          "title": "What is the therapy journey on MoodScale?",
+          "message": "Start with assessment, consult with a psychologist, begin therapy sessions, and receive ongoing support with progress tracking and 24/7 premium support.",
+          "redirectUrl": "https://moodscale.in/#work-process"
+        }
+      ]
+    },
+    {
+      "id": "assessments",
+      "label": "Assessments",
+      "description": "Evidence-based mental health assessments",
+      "redirectUrl": "https://moodscale.in/assessments",
+      "children": [
+        {
+          "id": "assess_personality",
+          "label": "Personality",
+          "description": "Big Five Personality Assessment",
+          "children": [
+            {
+              "id": "bfi_what",
+              "type": "faq",
+              "title": "What is the BFI-10 Personality Assessment?",
+              "message": "A quick 10-item personality assessment based on the scientifically validated BFI-10 measuring the Big Five personality dimensions. Takes about 5 minutes.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "bfi_discover",
+              "type": "faq",
+              "title": "What will I discover?",
+              "message": "You'll receive Big Five personality traits analysis, behavioral pattern understanding, and personal strengths identification using a validated tool.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "bfi_free",
+              "type": "faq",
+              "title": "Is this assessment free?",
+              "message": "Yes, the BFI-10 Big Five Personality Assessment is a free assessment available on MoodScale.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "bfi_start",
+              "type": "faq",
+              "title": "How do I start the assessment?",
+              "message": "Visit our Assessments page and select the BFI-10 assessment to begin. Answer carefully designed questions based on established psychological frameworks.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            }
+          ]
+        },
+        {
+          "id": "assess_anxiety",
+          "label": "Anxiety",
+          "description": "GAD-7 Anxiety Screening",
+          "children": [
+            {
+              "id": "gad_what",
+              "type": "faq",
+              "title": "What is the GAD-7 Anxiety Assessment?",
+              "message": "A clinically validated 7-item screening tool for Generalized Anxiety Disorder based on DSM-IV criteria. Takes about 10 minutes.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "gad_discover",
+              "type": "faq",
+              "title": "What will I discover?",
+              "message": "You'll receive a generalized anxiety assessment with quick, reliable results and professional interpretation guidance.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "gad_free",
+              "type": "faq",
+              "title": "Is this assessment free?",
+              "message": "Yes, the GAD-7 Anxiety Assessment is a free screening tool available on MoodScale.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "gad_start",
+              "type": "faq",
+              "title": "How do I start the assessment?",
+              "message": "Go to our Assessments page and select GAD-7 to begin. Results help guide your therapy sessions and personal growth journey.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            }
+          ]
+        },
+        {
+          "id": "assess_adhd",
+          "label": "ADHD",
+          "description": "Adult ADHD Self-Report Scale",
+          "children": [
+            {
+              "id": "adhd_what",
+              "type": "faq",
+              "title": "What is the ASRS-v1.1 ADHD Assessment?",
+              "message": "A WHO-developed 18-item scale for screening adult ADHD symptoms based on DSM-IV criteria. Takes about 12 minutes.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "adhd_discover",
+              "type": "faq",
+              "title": "What will I discover?",
+              "message": "You'll receive adult ADHD symptom evaluation, attention pattern analysis, and professional recommendations.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "adhd_premium",
+              "type": "faq",
+              "title": "Is this a premium assessment?",
+              "message": "Yes, the ASRS-v1.1 Adult ADHD Self-Report Scale is a premium assessment on MoodScale.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "adhd_start",
+              "type": "faq",
+              "title": "How do I start the assessment?",
+              "message": "Visit our Assessments page and select the ASRS-v1.1 assessment to begin your screening.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            }
+          ]
+        },
+        {
+          "id": "assess_general",
+          "label": "How Assessments Work",
+          "children": [
+            {
+              "id": "assess_process",
+              "type": "faq",
+              "title": "How do MoodScale assessments work?",
+              "message": "Take the assessment, receive a comprehensive report with insights, then use your results to guide therapy sessions and personal growth.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "assess_free_paid",
+              "type": "faq",
+              "title": "What is the difference between free and paid assessments?",
+              "message": "MoodScale offers free basic assessments like BFI-10 and GAD-7, plus detailed paid evaluations including premium tools like ASRS-v1.1 for deeper insights.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "assess_validated",
+              "type": "faq",
+              "title": "Are assessments scientifically validated?",
+              "message": "Yes. Our assessments are scientifically validated, HIPAA compliant, and used by 5000+ clients. They are designed by mental health professionals.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "assess_consult",
+              "type": "faq",
+              "title": "Can I discuss results with a therapist?",
+              "message": "Yes. Discuss your assessment results with certified psychologists to create a personalized treatment plan based on your mental health profile.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            },
+            {
+              "id": "assess_explore",
+              "type": "faq",
+              "title": "Where can I explore all assessments?",
+              "message": "Visit our Assessments page to explore all available psychological assessments and start your discovery journey.",
+              "redirectUrl": "https://moodscale.in/assessments"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing",
+      "description": "Therapy plans and packages",
+      "redirectUrl": "https://moodscale.in/#pricing",
+      "children": [
+        {
+          "id": "pricing_essential",
+          "type": "faq",
+          "title": "What is the Essential Care plan?",
+          "message": "Essential Care is ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute session, expert therapist matching, 24/7 email support, and post-session guidance.",
+          "redirectUrl": "https://moodscale.in/#pricing"
+        },
+        {
+          "id": "pricing_premium",
+          "type": "faq",
+          "title": "What is the Premium Journey plan?",
+          "message": "Premium Journey is ₹3,999 per package (save 67% from ₹12,000). Includes 4 sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support.",
+          "redirectUrl": "https://moodscale.in/#pricing"
+        },
+        {
+          "id": "pricing_transformative",
+          "type": "faq",
+          "title": "What is the Transformative Care plan?",
+          "message": "Transformative Care is ₹12,599 per program (save 50% from ₹25,000). Includes 12 sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support.",
+          "redirectUrl": "https://moodscale.in/#pricing"
+        },
+        {
+          "id": "pricing_couples",
+          "type": "faq",
+          "title": "Is pricing the same for individuals and couples?",
+          "message": "Yes. All plans have the same price for individuals and couples. There are no hidden fees.",
+          "redirectUrl": "https://moodscale.in/#pricing"
+        },
+        {
+          "id": "pricing_enterprise",
+          "type": "faq",
+          "title": "Do you offer enterprise or bulk pricing?",
+          "message": "Yes. We offer customized mental health programs including Employee Assistance Programs, executive wellness packages, and tailored workshops. Request a custom quote on our corporate pricing page.",
+          "redirectUrl": "https://moodscale.in/services/custom-pricing"
+        },
+        {
+          "id": "pricing_sessions",
+          "type": "faq",
+          "title": "How much do individual therapy sessions cost?",
+          "message": "Standalone individual therapy sessions start at ₹2,500. Package plans on our pricing page offer significant savings. Couples sessions start at ₹3,500 and group sessions at ₹1,500.",
+          "redirectUrl": "https://moodscale.in/#pricing"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "label": "Support & FAQs",
+      "description": "Help, FAQs, and platform information",
+      "redirectUrl": "https://moodscale.in/faqs",
+      "children": [
+        {
+          "id": "support_general",
+          "label": "General FAQs",
+          "children": [
+            {
+              "id": "faq_what",
+              "type": "faq",
+              "title": "What is MoodScale and how does it work?",
+              "message": "MoodScale is a comprehensive mental health platform connecting individuals with licensed therapists and counselors. We offer personalized therapy sessions, mental health assessments, and wellness resources through convenient online sessions.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            },
+            {
+              "id": "faq_therapists",
+              "type": "faq",
+              "title": "Who are your therapists and counselors?",
+              "message": "All therapists are licensed mental health professionals with extensive training and experience. They hold relevant degrees in psychology, counseling, or related fields.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            },
+            {
+              "id": "faq_cost",
+              "type": "faq",
+              "title": "How much do sessions cost?",
+              "message": "Plans start at ₹1,199 per session (Essential Care). Premium Journey is ₹3,999 for 4 sessions and Transformative Care is ₹12,599 for 12 sessions. Individual sessions start at ₹2,500.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            },
+            {
+              "id": "faq_secure",
+              "type": "faq",
+              "title": "Is my information secure and confidential?",
+              "message": "Yes. Our platform is HIPAA-compliant and all communications are encrypted. Your personal information and session content are strictly confidential.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            },
+            {
+              "id": "faq_mission",
+              "type": "faq",
+              "title": "What is MoodScale's mission?",
+              "message": "To provide evidence-based mental health assessments and resources that help individuals better understand and improve their mental wellbeing through accessible technology.",
+              "redirectUrl": "https://moodscale.in/about-us"
+            }
+          ]
+        },
+        {
+          "id": "support_options",
+          "label": "Support Options",
+          "redirectUrl": "https://moodscale.in/support-center",
+          "children": [
+            {
+              "id": "support_chat",
+              "type": "faq",
+              "title": "Is live chat support available?",
+              "message": "Yes. Live chat support is available 24/7 with instant response from our support team.",
+              "redirectUrl": "https://moodscale.in/support-center"
+            },
+            {
+              "id": "support_phone",
+              "type": "faq",
+              "title": "Can I call for support?",
+              "message": "Phone support is available Monday–Friday, 9:00 AM–8:00 PM. Call +91 9145607891 to speak with a representative.",
+              "redirectUrl": "https://moodscale.in/support-center"
+            },
+            {
+              "id": "support_email",
+              "type": "faq",
+              "title": "How do I reach email support?",
+              "message": "Email support is always open at contact@moodscale.in with responses within 24 hours.",
+              "redirectUrl": "https://moodscale.in/support-center"
+            },
+            {
+              "id": "support_center",
+              "type": "faq",
+              "title": "Where is the Support Center?",
+              "message": "Visit our Support Center for live chat, phone, and email support options. Our team is committed to helping you every step of the way.",
+              "redirectUrl": "https://moodscale.in/support-center"
+            }
+          ]
+        },
+        {
+          "id": "support_crisis",
+          "label": "Important Notice",
+          "children": [
+            {
+              "id": "crisis_notice",
+              "type": "faq",
+              "title": "Is MoodScale a crisis helpline?",
+              "message": "No. MoodScale is not a medical service or suicide prevention helpline. If you are in immediate distress, contact Tele MANAS: 1 800 891 4416 or AASRA: +91 22 2754 6669.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            },
+            {
+              "id": "crisis_help",
+              "type": "faq",
+              "title": "Where can I get immediate help?",
+              "message": "For suicidal thoughts or immediate distress, contact a 24×7 suicide prevention helpline: Tele MANAS 1 800 891 4416 or AASRA +91 22 2754 6669.",
+              "redirectUrl": "https://moodscale.in/faqs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "description": "Reach our team",
+      "redirectUrl": "https://moodscale.in/#contact",
+      "children": [
+        {
+          "id": "contact_location",
+          "type": "faq",
+          "title": "Where is MoodScale located?",
+          "message": "Almasoul Consulting Private Limited, 7th floor, Icon Tower, Baner Road, Laxman Nagar, Baner, Pune, Maharashtra - 411045, India.",
+          "redirectUrl": "https://moodscale.in/#contact"
+        },
+        {
+          "id": "contact_phone",
+          "type": "faq",
+          "title": "What is the contact phone number?",
+          "message": "Call us at +91 9145607891 during office hours for assistance.",
+          "redirectUrl": "https://moodscale.in/#contact"
+        },
+        {
+          "id": "contact_email",
+          "type": "faq",
+          "title": "What is the contact email?",
+          "message": "Email us at contact@moodscale.in for inquiries. We respond within 24 hours.",
+          "redirectUrl": "https://moodscale.in/#contact"
+        },
+        {
+          "id": "contact_hours",
+          "type": "faq",
+          "title": "What are the office hours?",
+          "message": "Monday–Friday: 9:00 AM–8:00 PM. Saturday: 10:00 AM–6:00 PM. Sunday: By appointment only.",
+          "redirectUrl": "https://moodscale.in/#contact"
+        },
+        {
+          "id": "contact_form",
+          "type": "faq",
+          "title": "How do I send a message?",
+          "message": "Use the contact form on our homepage to share your name, email, phone, service needed, and message. Our team will get back to you promptly.",
+          "redirectUrl": "https://moodscale.in/#contact"
+        }
+      ]
+    }
+  ]
+}
