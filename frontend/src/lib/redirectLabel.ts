@@ -1,29 +1,105 @@
+/**
+ * redirectLabel.ts
+ *
+ * Maps a node title + redirect_url to the correct CTA button label.
+ *
+ * Priority order:
+ *  1. URL-path rules  — most deterministic
+ *  2. Title keywords  — fallback for ambiguous URLs
+ *  3. Default         — "Visit Page"
+ *
+ * Rules are ordered from most-specific to least-specific so the first
+ * match wins.
+ */
+
 export function getRedirectLabel(title: string, url: string): string {
-  const titleLower = title.toLowerCase();
-  const urlLower = url.toLowerCase();
+  const t = title.toLowerCase();
+  const u = url.toLowerCase();
 
-  if (titleLower.includes("book")) return "Book Session";
-  if (titleLower.includes("browse")) return "Browse Therapists";
-  if (titleLower.includes("take assessment") || titleLower.includes("start the assessment")) {
-    return "Take Assessment";
+  // ── Booking flow ──────────────────────────────────────────────────────────
+  // Must come before /therapists so the booking path wins.
+  if (
+    u.includes("book-with-therapist") ||
+    u.includes("/sessions/book") ||
+    u.includes("/book-session")
+  ) {
+    return "Book Session";
   }
-  if (titleLower.includes("pricing") || titleLower.includes("cost") || titleLower.includes("plan")) {
-    return "View Pricing";
-  }
-  if (titleLower.includes("contact") || titleLower.includes("support")) return "Contact Support";
-  if (titleLower.includes("privacy")) return "Privacy Policy";
-  if (titleLower.includes("refund")) return "Refund Policy";
-  if (titleLower.includes("about") || titleLower.includes("mission")) return "About MoodScale";
 
-  if (urlLower.includes("/therapists") || urlLower.includes("book-with-therapist")) {
+  // ── Therapist listing / browse ────────────────────────────────────────────
+  if (
+    u.includes("/therapists") ||
+    t.includes("browse therapist") ||
+    t.includes("find a therapist") ||
+    t.includes("find therapist")
+  ) {
     return "Browse Therapists";
   }
-  if (urlLower.includes("/assessments")) return "Take Assessment";
-  if (urlLower.includes("pricing")) return "View Pricing";
-  if (urlLower.includes("/about-us")) return "About MoodScale";
-  if (urlLower.includes("/faqs")) return "View FAQs";
-  if (urlLower.includes("/support")) return "Contact Support";
-  if (urlLower.includes("/contact")) return "Contact Support";
 
+  // ── Assessments ───────────────────────────────────────────────────────────
+  if (
+    u.includes("/assessments") ||
+    u.includes("/open-assessments") ||
+    t.includes("take assessment") ||
+    t.includes("start the assessment") ||
+    t.includes("start assessment")
+  ) {
+    return "Start Assessment";
+  }
+
+  // ── Pricing ───────────────────────────────────────────────────────────────
+  if (
+    u.includes("pricing") ||
+    t.includes("pricing") ||
+    t.includes("cost") ||
+    t.includes("plan")
+  ) {
+    return "View Pricing";
+  }
+
+  // ── Support / Contact ─────────────────────────────────────────────────────
+  if (
+    u.includes("/support") ||
+    u.includes("/contact") ||
+    u.includes("#contact") ||
+    t.includes("contact") ||
+    t.includes("support")
+  ) {
+    return "Contact Us";
+  }
+
+  // ── Policies ──────────────────────────────────────────────────────────────
+  if (u.includes("refund") || t.includes("refund")) {
+    return "Refund Policy";
+  }
+
+  if (u.includes("privacy") || t.includes("privacy")) {
+    return "Privacy Policy";
+  }
+
+  // ── Feature / info pages ──────────────────────────────────────────────────
+  if (u.includes("/features/nature-retreat") || t.includes("nature retreat")) {
+    return "Learn More";
+  }
+
+  if (u.includes("/features/wellness") || t.includes("wellness centre")) {
+    return "Learn More";
+  }
+
+  // ── About / Mission ───────────────────────────────────────────────────────
+  if (
+    u.includes("/about") ||
+    t.includes("about") ||
+    t.includes("mission")
+  ) {
+    return "About MoodScale";
+  }
+
+  // ── FAQs ──────────────────────────────────────────────────────────────────
+  if (u.includes("/faqs") || t.includes("faq")) {
+    return "View FAQs";
+  }
+
+  // ── Default ───────────────────────────────────────────────────────────────
   return "Visit Page";
 }

@@ -1,69 +1,387 @@
 -- MoodScale FAQ Navigator seed data
 -- Run after schema.sql
+-- Updated: Quick Book with nested Pricing section, all legacy data preserved
 
 truncate table faq_nodes cascade;
 
 insert into faq_nodes (id, parent_id, node_type, title, answer, redirect_url, sort_order, is_active)
 values
-('71789c41-4266-4b4c-ae9e-ad6cc93e20a3', null, 'category', 'Quick Book', null, 'https://moodscale.in/sessions/book-with-therapist', 0, true),
-('2dc91c20-4c89-42e3-a7ef-ad86d36b04a6', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3', 'question', 'Essential', 'Essential Care at ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute therapy session, expert therapist matching, 24/7 email support, and post-session guidance. Ideal for trying therapy or addressing a specific concern.', 'https://moodscale.in/sessions/book-with-therapist', 0, true),
-('c3ab66db-f4d1-4c11-ab6c-9b54b08e2b36', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3', 'question', 'Premium', 'Premium Journey at ₹3,999 per package (save 67% from ₹12,000). Includes 4 therapy sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support. Best for sustained progress over a month.', 'https://moodscale.in/sessions/book-with-therapist', 1, true),
-('fd505022-dc79-49e6-ac97-92be39e648fb', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3', 'question', 'Transformative', 'Transformative Care at ₹12,599 per program (save 50% from ₹25,000). Includes 12 therapy sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support. Designed for deep, long-term mental wellness transformation.', 'https://moodscale.in/sessions/book-with-therapist', 2, true),
-('7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', null, 'category', 'Services', null, 'https://moodscale.in/#services', 1, true),
-('bb1fff0c-0508-421a-a0ba-235314cfcd56', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', 'subcategory', 'Therapy Sessions', null, 'https://moodscale.in/therapists', 0, true),
-('0d7b61af-4e96-403c-a0d6-d8dc9e1a3d58', 'bb1fff0c-0508-421a-a0ba-235314cfcd56', 'question', 'Find a Therapist', 'Browse licensed MoodScale therapists matched to your needs. Filter by expertise, approach, and availability, then book online or in-person sessions.', 'https://moodscale.in/therapists', 0, true),
-('8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', 'subcategory', 'Assessments', null, 'https://moodscale.in/open-assessments', 1, true),
-('dbccabe4-866c-4a55-a7d5-67b1765fa8d2', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'Anxiety and Stress', null, 'https://moodscale.in/open-assessments', 0, true),
-('bfebc95e-ef40-41a1-af54-6a6af9eb138d', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'ADHD and Attention', null, 'https://moodscale.in/open-assessments', 1, true),
-('976d9438-7c58-4864-a34f-d4ea68e81cd8', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'Personality', null, 'https://moodscale.in/open-assessments', 2, true),
-('ba5f84ca-c82c-432b-a92d-9e17f2098974', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'Depression and Mood', null, 'https://moodscale.in/open-assessments', 3, true),
-('36fa4b2a-0a60-4115-a524-fef866904fbd', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'Comprehensive', null, 'https://moodscale.in/open-assessments', 4, true),
-('a8935a6a-a6ec-40a8-a092-e0bece3fdedc', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', 'subcategory', 'Other', null, 'https://moodscale.in/open-assessments', 5, true),
-('67c56b1c-dee5-40ac-adc8-10e9bf7a41e7', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'GAD-7 Anxiety Assessment', 'The Generalized Anxiety Disorder 7-item (GAD-7) scale is a clinically validated screening tool for anxiety disorders. Takes about 10 minutes. Free assessment.', 'https://moodscale.in/open-assessments/gad-7-anxiety-assessment', 0, true),
-('674fd7e1-5cdb-4ed7-acfe-5d9f1c477e11', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'Depression Anxiety Stress Scales-21 (DASS-21)', 'A comprehensive 21-item scale measuring depression, anxiety, and stress with three 7-item subscales. Takes about 10 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/depression-anxiety-stress-scales-21-dass-21', 1, true),
-('ab5ce4b4-1619-4ab6-a524-1fba4d9ee00c', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'PTSD Checklist for DSM-5 (PCL-5)', 'A 20-item self-report measure assessing PTSD symptoms according to DSM-5 criteria. Takes about 12 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/ptsd-checklist-for-dsm-5-pcl-5', 2, true),
-('b34645ee-2df3-4417-a955-e922095c9945', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'Screen for Child Anxiety Related Disorders (SCARED)', 'A 41-item child and adolescent anxiety screening tool measuring multiple anxiety domains. Takes about 15 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/screen-for-child-anxiety-related-disorders-scared', 3, true),
-('4a61863e-d437-47e8-a1c1-f16a89488219', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'Hamilton Anxiety Rating Scale (HAM-A)', 'A clinician-rated 14-item scale measuring anxiety severity across psychological and somatic symptoms. Takes about 20 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/hamilton-anxiety-rating-scale-ham-a', 4, true),
-('e0a79a79-13e3-465e-ad7e-4e8d422f2e92', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'Liebowitz Social Anxiety Scale (LSAS)', 'A 24-item scale measuring fear and avoidance across social interaction and performance situations. Takes about 15 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/liebowitz-social-anxiety-scale-lsas', 5, true),
-('4dfe7166-1ec2-4c7a-ae1c-19c2d3de7bdc', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2', 'question', 'Panic Disorder Severity Scale (PDSS)', 'A 7-item clinician-rated scale measuring panic disorder severity across multiple dimensions. Takes about 10 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/panic-disorder-severity-scale-pdss', 6, true),
-('99fc1d27-ecf0-4cb9-ae78-14d203d0158a', 'bfebc95e-ef40-41a1-af54-6a6af9eb138d', 'question', 'Adult ADHD Self-Report Scale v1.1', 'A WHO-developed 18-item scale for screening adult ADHD symptoms based on DSM-IV criteria. Takes about 12 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/adult-adhd-self-report-scale-v11', 0, true),
-('08f98003-f3e9-414d-ab2c-d39171ab3b95', '976d9438-7c58-4864-a34f-d4ea68e81cd8', 'question', 'Big Five Personality Assessment (BFI-10)', 'Quick 10-item personality assessment based on the scientifically validated BFI-10 measuring the Big Five personality dimensions. Takes about 5 minutes. Free assessment.', 'https://moodscale.in/open-assessments/big-five-personality-assessment-bfi-10', 0, true),
-('cd539288-fb83-425f-ad84-8b4fc63e7af6', 'ba5f84ca-c82c-432b-a92d-9e17f2098974', 'question', 'Patient Health Questionnaire-9 (PHQ-9)', 'A 9-item depression screening tool validated for assessing depression severity and monitoring treatment response. Takes about 8 minutes. Free assessment.', 'https://moodscale.in/open-assessments/patient-health-questionnaire-9-phq-9', 0, true),
-('4cf359b9-2acf-4b2f-a882-81b06342ce46', 'ba5f84ca-c82c-432b-a92d-9e17f2098974', 'question', 'Beck Depression Inventory-II (BDI-II)', 'A 21-item multiple-choice self-report depression assessment measuring severity of depressive symptoms. Takes about 15 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/beck-depression-inventory-ii-bdi-ii', 1, true),
-('543cfd1a-94f5-456a-a485-6295aaef99fd', 'ba5f84ca-c82c-432b-a92d-9e17f2098974', 'question', 'Mood Disorder Questionnaire (MDQ)', 'A screening instrument for bipolar spectrum disorders with 13 yes/no items plus follow-up questions. Takes about 10 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/mood-disorder-questionnaire-mdq', 2, true),
-('c2803b67-b222-4f0e-a6ad-db401db25e24', '36fa4b2a-0a60-4115-a524-fef866904fbd', 'question', 'Comprehensive Anxiety Assessment', 'A multi-component assessment combining GAD-7, Social Anxiety (Liebowitz Scale), and Panic Disorder screening tools for comprehensive anxiety evaluation. Takes about 15 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/comprehensive-anxiety-assessment', 0, true),
-('4e33fd02-52f8-4411-aa9b-b4ca6ef4d010', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc', 'question', 'Eating Attitudes Test-26 (EAT-26)', 'A standardized 26-item screening tool for eating disorder symptoms and attitudes toward food and weight. Takes about 12 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/eating-attitudes-test-26-eat-26', 0, true),
-('3b4256f5-fb49-4b67-a352-997f65b9a6eb', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc', 'question', 'Barratt Impulsiveness Scale-15 (BIS-15)', 'A 15-item assessment measuring impulsiveness across attentional, motor, and non-planning dimensions. Takes about 8 minutes. Free assessment.', 'https://moodscale.in/open-assessments/barratt-impulsiveness-scale-15-bis-15', 1, true),
-('f059078a-0179-46c9-aaed-1900dd8e0d68', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc', 'question', 'Autism Spectrum Quotient-50 (AQ-50)', 'A 50-item questionnaire to assess autistic traits in adults with average or above average intelligence. Takes about 20 minutes. Premium assessment.', 'https://moodscale.in/open-assessments/autism-spectrum-quotient-50-aq-50', 2, true),
-('15ad2a68-3886-4915-a91b-a8254a9d4bd8', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', 'question', 'Nature Retreat', 'Coming Soon', 'https://moodscale.in/features/nature-retreat', 2, true),
-('6bc2148a-52ec-433f-ab6d-cff619d2acbc', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', 'question', 'Wellness Centres', 'Coming Soon', 'https://moodscale.in/features/wellness-centers', 3, true),
-('51b3af37-9489-42c5-ae1d-9745391c0cd4', null, 'category', 'FAQs', null, 'https://moodscale.in/faqs', 2, true),
-('040db7ff-e4f3-4f5b-ae9e-44c7b312414c', '51b3af37-9489-42c5-ae1d-9745391c0cd4', 'subcategory', 'Therapy Session Details', null, 'https://moodscale.in/faqs', 0, true),
-('f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', '040db7ff-e4f3-4f5b-ae9e-44c7b312414c', 'subcategory', 'Pre Session FAQs', null, 'https://moodscale.in/faqs', 0, true),
-('df850848-8367-4d10-aefa-69239d904f19', '040db7ff-e4f3-4f5b-ae9e-44c7b312414c', 'subcategory', 'Post Session FAQs', null, 'https://moodscale.in/faqs', 1, true),
-('93bd1a2e-a865-429f-a081-379b1d6fd7b8', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', 'question', 'How do I prepare for my first therapy session?', 'Find a quiet, private space with a stable internet connection for online sessions. Reflect on what you want to discuss and note any questions. Arrive a few minutes early to settle in.', 'https://moodscale.in/faqs', 0, true),
-('4a59354f-fd51-44ed-a1b1-07543cad9824', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', 'question', 'What should I bring to my session?', 'Bring any notes about symptoms, goals, or questions. For follow-up sessions, jot down observations since your last visit. No special documents are required for your first session.', 'https://moodscale.in/faqs', 1, true),
-('fe006602-f035-4597-a8e8-260423be3724', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', 'question', 'How long is a therapy session?', 'Standard individual therapy sessions are 50 minutes. Couples sessions may run 60–90 minutes depending on your therapist and plan.', 'https://moodscale.in/faqs', 2, true),
-('eef64cad-114e-4c4c-a2e8-7a7470738ede', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', 'question', 'Can I choose between online and in-person sessions?', 'Yes. MoodScale offers both online and in-person therapy. You can select your preferred format when booking with your therapist.', 'https://moodscale.in/faqs', 3, true),
-('b2237a5f-69a6-4854-a842-fa39fa64e775', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', 'question', 'Is my session confidential?', 'Yes. All sessions are confidential and conducted in a secure environment. MoodScale follows strict privacy standards to protect your information.', 'https://moodscale.in/faqs', 4, true),
-('0dd307ad-57da-48e3-a040-36afb736609d', 'df850848-8367-4d10-aefa-69239d904f19', 'question', 'What happens after my therapy session?', 'Your therapist may share insights, coping strategies, or homework to practice before the next session. You will receive guidance on scheduling follow-up sessions as needed.', 'https://moodscale.in/faqs', 0, true),
-('f9900753-6285-43ff-ac31-a0dc3cc910cd', 'df850848-8367-4d10-aefa-69239d904f19', 'question', 'Will I receive session notes or a summary?', 'Depending on your plan, you may receive post-session guidance or wellness notes. Premium and Transformative plans include structured wellness reports.', 'https://moodscale.in/faqs', 1, true),
-('bb06851d-3017-4bb3-afbf-c698cc38c31e', 'df850848-8367-4d10-aefa-69239d904f19', 'question', 'How often should I attend therapy?', 'Most clients begin with weekly or bi-weekly sessions. Your therapist will recommend a frequency based on your goals and progress.', 'https://moodscale.in/faqs', 2, true),
-('e23d75b3-c86c-4468-aff6-bf56f0fd3675', 'df850848-8367-4d10-aefa-69239d904f19', 'question', 'Can I switch therapists if needed?', 'Yes. If you feel your current therapist is not the right fit, contact MoodScale support and we will help you find a better match.', 'https://moodscale.in/faqs', 3, true),
-('e866200a-1209-4f58-afcd-261c3f4f0e69', 'df850848-8367-4d10-aefa-69239d904f19', 'question', 'How do I book my next session?', 'Book your next session through your MoodScale dashboard or the booking page. Premium and Transformative plans include personalised scheduling support.', 'https://moodscale.in/faqs', 4, true),
-('76cd41ce-4ef0-4325-a12a-b038274150e5', '51b3af37-9489-42c5-ae1d-9745391c0cd4', 'subcategory', 'Assessments', null, 'https://moodscale.in/open-assessments', 1, true),
-('417d8791-c1e4-48b1-aead-0df9ee30b8de', '76cd41ce-4ef0-4325-a12a-b038274150e5', 'question', 'How do MoodScale assessments work?', 'Take a scientifically validated assessment, receive a detailed report with insights, and use your results to guide therapy and personal growth.', 'https://moodscale.in/open-assessments', 0, true),
-('c17666fa-9660-4973-a9eb-b00f4350504b', '76cd41ce-4ef0-4325-a12a-b038274150e5', 'question', 'Are assessments free or paid?', 'MoodScale offers free assessments such as GAD-7, PHQ-9, and BFI-10, plus premium assessments for deeper clinical insights.', 'https://moodscale.in/open-assessments', 1, true),
-('253350b8-23f2-4874-af01-3ce5acfed074', '76cd41ce-4ef0-4325-a12a-b038274150e5', 'question', 'How long do assessments take?', 'Most assessments take 5–20 minutes depending on the tool. Duration is shown on each assessment card before you begin.', 'https://moodscale.in/open-assessments', 2, true),
-('5f9ce6ac-ce29-4362-ab1b-bac6020da273', '76cd41ce-4ef0-4325-a12a-b038274150e5', 'question', 'Can I discuss my results with a therapist?', 'Yes. Share your assessment results with a MoodScale psychologist to build a personalised treatment plan.', 'https://moodscale.in/open-assessments', 3, true),
-('39d5b025-024e-4b91-ae9d-5fabcd93c33a', '76cd41ce-4ef0-4325-a12a-b038274150e5', 'question', 'Are MoodScale assessments scientifically validated?', 'Yes. Our assessments use established psychological frameworks and are designed by mental health professionals.', 'https://moodscale.in/open-assessments', 4, true),
-('eabbdca5-e829-46ca-af02-653f84f1c0b6', '51b3af37-9489-42c5-ae1d-9745391c0cd4', 'subcategory', 'Cancellations and Refunds', null, 'https://moodscale.in/policies/refund-policy', 2, true),
-('4d6548eb-3f0b-400f-a492-e8fefbbcd325', 'eabbdca5-e829-46ca-af02-653f84f1c0b6', 'question', 'What is MoodScale''s cancellation policy?', 'Sessions can be rescheduled or cancelled according to our service delivery policy. Please cancel at least 24 hours before your scheduled session to avoid charges.', 'https://moodscale.in/policies/refund-policy', 0, true),
-('cc6e19dc-ef45-4705-ab66-d901cb302261', 'eabbdca5-e829-46ca-af02-653f84f1c0b6', 'question', 'How do I cancel or reschedule a session?', 'Cancel or reschedule through your MoodScale dashboard or by contacting support at contact@moodscale.in or +91 9145607891.', 'https://moodscale.in/policies/refund-policy', 1, true),
-('5e533439-0abe-4b30-a7c0-4497c66ce655', 'eabbdca5-e829-46ca-af02-653f84f1c0b6', 'question', 'Am I eligible for a refund?', 'Refund eligibility depends on your plan and timing of cancellation. See our Refund Policy for full details.', 'https://moodscale.in/policies/refund-policy', 2, true),
-('e6bab8f8-ecee-423b-af70-bdba05d296e9', 'eabbdca5-e829-46ca-af02-653f84f1c0b6', 'question', 'What if my therapist cancels the session?', 'If your therapist cancels, you will receive a full credit or the option to reschedule at no additional cost.', 'https://moodscale.in/policies/refund-policy', 3, true),
-('b6bf35e0-cfbe-4889-ab84-1348d12ac05c', 'eabbdca5-e829-46ca-af02-653f84f1c0b6', 'question', 'How long do refunds take to process?', 'Approved refunds are typically processed within 5–7 business days to your original payment method.', 'https://moodscale.in/policies/refund-policy', 4, true),
-('6fc61628-1d4d-4994-a07e-251fa089c40c', null, 'category', 'Get in Touch', null, 'https://moodscale.in/#contact', 3, true),
-('888f2f3f-07e9-4844-a06d-c791187df1de', '6fc61628-1d4d-4994-a07e-251fa089c40c', 'question', 'Contact Form', 'Send us a message through the MoodScale contact form and our team will respond within 24 hours.', 'https://moodscale.in/#contact', 0, true),
-('6868c8e6-425a-4107-a273-df048dacdaef', '6fc61628-1d4d-4994-a07e-251fa089c40c', 'question', 'Call Us', 'Speak with our team Monday–Friday, 9:00 AM–8:00 PM at +91 9145607891.', 'https://moodscale.in/#contact', 1, true),
-('e797ce66-0673-4849-a1ef-4153cca35316', '6fc61628-1d4d-4994-a07e-251fa089c40c', 'question', 'Email Us', 'Email contact@moodscale.in for inquiries. We respond within 24 hours on business days.', 'https://moodscale.in/#contact', 2, true);
+
+-- ─────────────────────────────────────────────────────────
+-- ROOT CATEGORIES (parent_id = null)
+-- ─────────────────────────────────────────────────────────
+
+-- 1. Quick Book
+('71789c41-4266-4b4c-ae9e-ad6cc93e20a3', null, 'category',
+ 'Quick Book', null,
+ 'https://moodscale.in/sessions/book-with-therapist', 0, true),
+
+-- 2. Services
+('7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f', null, 'category',
+ 'Services', null,
+ 'https://moodscale.in/#services', 1, true),
+
+-- 3. FAQs
+('51b3af37-9489-42c5-ae1d-9745391c0cd4', null, 'category',
+ 'FAQs', null,
+ 'https://moodscale.in/faqs', 2, true),
+
+-- 4. Get in Touch
+('6fc61628-1d4d-4994-a07e-251fa089c40c', null, 'category',
+ 'Get in Touch', null,
+ 'https://moodscale.in/#contact', 3, true),
+
+-- ─────────────────────────────────────────────────────────
+-- QUICK BOOK CHILDREN
+-- ─────────────────────────────────────────────────────────
+
+-- Quick Book → Pricing  (subcategory)
+('qb-pricing-0001-0001-0001-000000000001', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
+ 'subcategory', 'Pricing', null,
+ 'https://moodscale.in/#pricing', 0, true),
+
+-- Quick Book → Essential  (question — direct top-level shortcut)
+('2dc91c20-4c89-42e3-a7ef-ad86d36b04a6', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
+ 'question', 'Essential',
+ 'Essential Care at ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute therapy session, expert therapist matching, 24/7 email support, and post-session guidance. Ideal for trying therapy or addressing a specific concern.',
+ 'https://moodscale.in/sessions/book-with-therapist', 1, true),
+
+-- Quick Book → Premium  (question — direct top-level shortcut)
+('c3ab66db-f4d1-4c11-ab6c-9b54b08e2b36', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
+ 'question', 'Premium',
+ 'Premium Journey at ₹3,999 per package (save 67% from ₹12,000). Includes 4 therapy sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support. Best for sustained progress over a month.',
+ 'https://moodscale.in/sessions/book-with-therapist', 2, true),
+
+-- Quick Book → Transformative  (question — direct top-level shortcut)
+('fd505022-dc79-49e6-ac97-92be39e648fb', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
+ 'question', 'Transformative',
+ 'Transformative Care at ₹12,599 per program (save 50% from ₹25,000). Includes 12 therapy sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support. Designed for deep, long-term mental wellness transformation.',
+ 'https://moodscale.in/sessions/book-with-therapist', 3, true),
+
+-- ─────────────────────────────────────────────────────────
+-- QUICK BOOK → PRICING CHILDREN
+-- ─────────────────────────────────────────────────────────
+
+-- Pricing → Essential
+('qb-pricing-ess-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
+ 'question', 'Essential Care — ₹1,199 / session',
+ 'Essential Care at ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute therapy session, expert therapist matching, 24/7 email support, and post-session guidance. Ideal for trying therapy or addressing a specific concern.',
+ 'https://moodscale.in/sessions/book-with-therapist', 0, true),
+
+-- Pricing → Premium
+('qb-pricing-pre-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
+ 'question', 'Premium Journey — ₹3,999 / package',
+ 'Premium Journey at ₹3,999 per package (save 67% from ₹12,000). Includes 4 therapy sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support. Best for sustained progress over a month.',
+ 'https://moodscale.in/sessions/book-with-therapist', 1, true),
+
+-- Pricing → Transformative
+('qb-pricing-tra-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
+ 'question', 'Transformative Care — ₹12,599 / program',
+ 'Transformative Care at ₹12,599 per program (save 50% from ₹25,000). Includes 12 therapy sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support. Designed for deep, long-term mental wellness transformation.',
+ 'https://moodscale.in/sessions/book-with-therapist', 2, true),
+
+-- Pricing → Compare Plans
+('qb-pricing-cmp-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
+ 'question', 'Compare All Plans',
+ 'Essential Care: ₹1,199/session — 1 session, email support. Premium Journey: ₹3,999/package — 4 sessions + 1 assessment + wellness report + priority support. Transformative Care: ₹12,599/program — 12 sessions + 4 assessments + monthly & annual wellness reports + priority support. Same price for individuals and couples. No hidden fees.',
+ 'https://moodscale.in/#pricing', 3, true),
+
+-- ─────────────────────────────────────────────────────────
+-- SERVICES → Therapy Sessions
+-- ─────────────────────────────────────────────────────────
+
+('bb1fff0c-0508-421a-a0ba-235314cfcd56', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f',
+ 'subcategory', 'Therapy Sessions', null,
+ 'https://moodscale.in/therapists', 0, true),
+
+-- Therapy Sessions → Find a Therapist
+('0d7b61af-4e96-403c-a0d6-d8dc9e1a3d58', 'bb1fff0c-0508-421a-a0ba-235314cfcd56',
+ 'question', 'Find a Therapist',
+ 'Browse licensed MoodScale therapists matched to your needs. Filter by expertise, approach, and availability, then book online or in-person sessions.',
+ 'https://moodscale.in/therapists', 0, true),
+
+-- ─────────────────────────────────────────────────────────
+-- SERVICES → Assessments
+-- ─────────────────────────────────────────────────────────
+
+('8a0f6fac-afdd-4f86-a7e0-75ebc18579e8', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f',
+ 'subcategory', 'Assessments', null,
+ 'https://moodscale.in/open-assessments', 1, true),
+
+-- Assessment sub-categories
+('dbccabe4-866c-4a55-a7d5-67b1765fa8d2', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'Anxiety and Stress', null,
+ 'https://moodscale.in/open-assessments', 0, true),
+
+('bfebc95e-ef40-41a1-af54-6a6af9eb138d', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'ADHD and Attention', null,
+ 'https://moodscale.in/open-assessments', 1, true),
+
+('976d9438-7c58-4864-a34f-d4ea68e81cd8', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'Personality', null,
+ 'https://moodscale.in/open-assessments', 2, true),
+
+('ba5f84ca-c82c-432b-a92d-9e17f2098974', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'Depression and Mood', null,
+ 'https://moodscale.in/open-assessments', 3, true),
+
+('36fa4b2a-0a60-4115-a524-fef866904fbd', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'Comprehensive', null,
+ 'https://moodscale.in/open-assessments', 4, true),
+
+('a8935a6a-a6ec-40a8-a092-e0bece3fdedc', '8a0f6fac-afdd-4f86-a7e0-75ebc18579e8',
+ 'subcategory', 'Other', null,
+ 'https://moodscale.in/open-assessments', 5, true),
+
+-- Anxiety and Stress assessments
+('67c56b1c-dee5-40ac-adc8-10e9bf7a41e7', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'GAD-7 Anxiety Assessment',
+ 'The Generalized Anxiety Disorder 7-item (GAD-7) scale is a clinically validated screening tool for anxiety disorders. Takes about 10 minutes. Free assessment.',
+ 'https://moodscale.in/open-assessments/gad-7-anxiety-assessment', 0, true),
+
+('674fd7e1-5cdb-4ed7-acfe-5d9f1c477e11', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'Depression Anxiety Stress Scales-21 (DASS-21)',
+ 'A comprehensive 21-item scale measuring depression, anxiety, and stress with three 7-item subscales. Takes about 10 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/depression-anxiety-stress-scales-21-dass-21', 1, true),
+
+('ab5ce4b4-1619-4ab6-a524-1fba4d9ee00c', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'PTSD Checklist for DSM-5 (PCL-5)',
+ 'A 20-item self-report measure assessing PTSD symptoms according to DSM-5 criteria. Takes about 12 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/ptsd-checklist-for-dsm-5-pcl-5', 2, true),
+
+('b34645ee-2df3-4417-a955-e922095c9945', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'Screen for Child Anxiety Related Disorders (SCARED)',
+ 'A 41-item child and adolescent anxiety screening tool measuring multiple anxiety domains. Takes about 15 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/screen-for-child-anxiety-related-disorders-scared', 3, true),
+
+('4a61863e-d437-47e8-a1c1-f16a89488219', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'Hamilton Anxiety Rating Scale (HAM-A)',
+ 'A clinician-rated 14-item scale measuring anxiety severity across psychological and somatic symptoms. Takes about 20 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/hamilton-anxiety-rating-scale-ham-a', 4, true),
+
+('e0a79a79-13e3-465e-ad7e-4e8d422f2e92', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'Liebowitz Social Anxiety Scale (LSAS)',
+ 'A 24-item scale measuring fear and avoidance across social interaction and performance situations. Takes about 15 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/liebowitz-social-anxiety-scale-lsas', 5, true),
+
+('4dfe7166-1ec2-4c7a-ae1c-19c2d3de7bdc', 'dbccabe4-866c-4a55-a7d5-67b1765fa8d2',
+ 'question', 'Panic Disorder Severity Scale (PDSS)',
+ 'A 7-item clinician-rated scale measuring panic disorder severity across multiple dimensions. Takes about 10 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/panic-disorder-severity-scale-pdss', 6, true),
+
+-- ADHD and Attention assessments
+('99fc1d27-ecf0-4cb9-ae78-14d203d0158a', 'bfebc95e-ef40-41a1-af54-6a6af9eb138d',
+ 'question', 'Adult ADHD Self-Report Scale v1.1',
+ 'A WHO-developed 18-item scale for screening adult ADHD symptoms based on DSM-IV criteria. Takes about 12 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/adult-adhd-self-report-scale-v11', 0, true),
+
+-- Personality assessments
+('08f98003-f3e9-414d-ab2c-d39171ab3b95', '976d9438-7c58-4864-a34f-d4ea68e81cd8',
+ 'question', 'Big Five Personality Assessment (BFI-10)',
+ 'Quick 10-item personality assessment based on the scientifically validated BFI-10 measuring the Big Five personality dimensions. Takes about 5 minutes. Free assessment.',
+ 'https://moodscale.in/open-assessments/big-five-personality-assessment-bfi-10', 0, true),
+
+-- Depression and Mood assessments
+('cd539288-fb83-425f-ad84-8b4fc63e7af6', 'ba5f84ca-c82c-432b-a92d-9e17f2098974',
+ 'question', 'Patient Health Questionnaire-9 (PHQ-9)',
+ 'A 9-item depression screening tool validated for assessing depression severity and monitoring treatment response. Takes about 8 minutes. Free assessment.',
+ 'https://moodscale.in/open-assessments/patient-health-questionnaire-9-phq-9', 0, true),
+
+('4cf359b9-2acf-4b2f-a882-81b06342ce46', 'ba5f84ca-c82c-432b-a92d-9e17f2098974',
+ 'question', 'Beck Depression Inventory-II (BDI-II)',
+ 'A 21-item multiple-choice self-report depression assessment measuring severity of depressive symptoms. Takes about 15 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/beck-depression-inventory-ii-bdi-ii', 1, true),
+
+('543cfd1a-94f5-456a-a485-6295aaef99fd', 'ba5f84ca-c82c-432b-a92d-9e17f2098974',
+ 'question', 'Mood Disorder Questionnaire (MDQ)',
+ 'A screening instrument for bipolar spectrum disorders with 13 yes/no items plus follow-up questions. Takes about 10 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/mood-disorder-questionnaire-mdq', 2, true),
+
+-- Comprehensive assessments
+('c2803b67-b222-4f0e-a6ad-db401db25e24', '36fa4b2a-0a60-4115-a524-fef866904fbd',
+ 'question', 'Comprehensive Anxiety Assessment',
+ 'A multi-component assessment combining GAD-7, Social Anxiety (Liebowitz Scale), and Panic Disorder screening tools for comprehensive anxiety evaluation. Takes about 15 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/comprehensive-anxiety-assessment', 0, true),
+
+-- Other assessments
+('4e33fd02-52f8-4411-aa9b-b4ca6ef4d010', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc',
+ 'question', 'Eating Attitudes Test-26 (EAT-26)',
+ 'A standardized 26-item screening tool for eating disorder symptoms and attitudes toward food and weight. Takes about 12 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/eating-attitudes-test-26-eat-26', 0, true),
+
+('3b4256f5-fb49-4b67-a352-997f65b9a6eb', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc',
+ 'question', 'Barratt Impulsiveness Scale-15 (BIS-15)',
+ 'A 15-item assessment measuring impulsiveness across attentional, motor, and non-planning dimensions. Takes about 8 minutes. Free assessment.',
+ 'https://moodscale.in/open-assessments/barratt-impulsiveness-scale-15-bis-15', 1, true),
+
+('f059078a-0179-46c9-aaed-1900dd8e0d68', 'a8935a6a-a6ec-40a8-a092-e0bece3fdedc',
+ 'question', 'Autism Spectrum Quotient-50 (AQ-50)',
+ 'A 50-item questionnaire to assess autistic traits in adults with average or above average intelligence. Takes about 20 minutes. Premium assessment.',
+ 'https://moodscale.in/open-assessments/autism-spectrum-quotient-50-aq-50', 2, true),
+
+-- ─────────────────────────────────────────────────────────
+-- SERVICES → Placeholder sections
+-- ─────────────────────────────────────────────────────────
+
+('15ad2a68-3886-4915-a91b-a8254a9d4bd8', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f',
+ 'question', 'Nature Retreat',
+ 'Coming Soon — our nature retreat experiences are being crafted. Visit the page to learn more and register your interest.',
+ 'https://moodscale.in/features/nature-retreat', 2, true),
+
+('6bc2148a-52ec-433f-ab6d-cff619d2acbc', '7873f7f9-c8a7-4f9c-a68e-de48d4c87d3f',
+ 'question', 'Wellness Centres',
+ 'Coming Soon — our holistic wellness centres are being set up across locations. Visit the page to learn more and register your interest.',
+ 'https://moodscale.in/features/wellness-centers', 3, true),
+
+-- ─────────────────────────────────────────────────────────
+-- FAQs → Therapy Session Details
+-- ─────────────────────────────────────────────────────────
+
+('040db7ff-e4f3-4f5b-ae9e-44c7b312414c', '51b3af37-9489-42c5-ae1d-9745391c0cd4',
+ 'subcategory', 'Therapy Session Details', null,
+ 'https://moodscale.in/faqs', 0, true),
+
+('f09dcc70-39a9-474b-a60c-e44fc7fbb2e8', '040db7ff-e4f3-4f5b-ae9e-44c7b312414c',
+ 'subcategory', 'Pre Session FAQs', null,
+ 'https://moodscale.in/faqs', 0, true),
+
+('df850848-8367-4d10-aefa-69239d904f19', '040db7ff-e4f3-4f5b-ae9e-44c7b312414c',
+ 'subcategory', 'Post Session FAQs', null,
+ 'https://moodscale.in/faqs', 1, true),
+
+-- Pre Session FAQs
+('93bd1a2e-a865-429f-a081-379b1d6fd7b8', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8',
+ 'question', 'How do I prepare for my first therapy session?',
+ 'Find a quiet, private space with a stable internet connection for online sessions. Reflect on what you want to discuss and note any questions. Arrive a few minutes early to settle in.',
+ 'https://moodscale.in/faqs', 0, true),
+
+('4a59354f-fd51-44ed-a1b1-07543cad9824', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8',
+ 'question', 'What should I bring to my session?',
+ 'Bring any notes about symptoms, goals, or questions. For follow-up sessions, jot down observations since your last visit. No special documents are required for your first session.',
+ 'https://moodscale.in/faqs', 1, true),
+
+('fe006602-f035-4597-a8e8-260423be3724', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8',
+ 'question', 'How long is a therapy session?',
+ 'Standard individual therapy sessions are 50 minutes. Couples sessions may run 60–90 minutes depending on your therapist and plan.',
+ 'https://moodscale.in/faqs', 2, true),
+
+('eef64cad-114e-4c4c-a2e8-7a7470738ede', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8',
+ 'question', 'Can I choose between online and in-person sessions?',
+ 'Yes. MoodScale offers both online and in-person therapy. You can select your preferred format when booking with your therapist.',
+ 'https://moodscale.in/faqs', 3, true),
+
+('b2237a5f-69a6-4854-a842-fa39fa64e775', 'f09dcc70-39a9-474b-a60c-e44fc7fbb2e8',
+ 'question', 'Is my session confidential?',
+ 'Yes. All sessions are confidential and conducted in a secure environment. MoodScale follows strict privacy standards to protect your information.',
+ 'https://moodscale.in/faqs', 4, true),
+
+-- Post Session FAQs
+('0dd307ad-57da-48e3-a040-36afb736609d', 'df850848-8367-4d10-aefa-69239d904f19',
+ 'question', 'What happens after my therapy session?',
+ 'Your therapist may share insights, coping strategies, or homework to practice before the next session. You will receive guidance on scheduling follow-up sessions as needed.',
+ 'https://moodscale.in/faqs', 0, true),
+
+('f9900753-6285-43ff-ac31-a0dc3cc910cd', 'df850848-8367-4d10-aefa-69239d904f19',
+ 'question', 'Will I receive session notes or a summary?',
+ 'Depending on your plan, you may receive post-session guidance or wellness notes. Premium and Transformative plans include structured wellness reports.',
+ 'https://moodscale.in/faqs', 1, true),
+
+('bb06851d-3017-4bb3-afbf-c698cc38c31e', 'df850848-8367-4d10-aefa-69239d904f19',
+ 'question', 'How often should I attend therapy?',
+ 'Most clients begin with weekly or bi-weekly sessions. Your therapist will recommend a frequency based on your goals and progress.',
+ 'https://moodscale.in/faqs', 2, true),
+
+('e23d75b3-c86c-4468-aff6-bf56f0fd3675', 'df850848-8367-4d10-aefa-69239d904f19',
+ 'question', 'Can I switch therapists if needed?',
+ 'Yes. If you feel your current therapist is not the right fit, contact MoodScale support and we will help you find a better match.',
+ 'https://moodscale.in/faqs', 3, true),
+
+('e866200a-1209-4f58-afcd-261c3f4f0e69', 'df850848-8367-4d10-aefa-69239d904f19',
+ 'question', 'How do I book my next session?',
+ 'Book your next session through your MoodScale dashboard or the booking page. Premium and Transformative plans include personalised scheduling support.',
+ 'https://moodscale.in/sessions/book-with-therapist', 4, true),
+
+-- ─────────────────────────────────────────────────────────
+-- FAQs → Assessments
+-- ─────────────────────────────────────────────────────────
+
+('76cd41ce-4ef0-4325-a12a-b038274150e5', '51b3af37-9489-42c5-ae1d-9745391c0cd4',
+ 'subcategory', 'Assessments', null,
+ 'https://moodscale.in/open-assessments', 1, true),
+
+('417d8791-c1e4-48b1-aead-0df9ee30b8de', '76cd41ce-4ef0-4325-a12a-b038274150e5',
+ 'question', 'How do MoodScale assessments work?',
+ 'Take a scientifically validated assessment, receive a detailed report with insights, and use your results to guide therapy and personal growth.',
+ 'https://moodscale.in/open-assessments', 0, true),
+
+('c17666fa-9660-4973-a9eb-b00f4350504b', '76cd41ce-4ef0-4325-a12a-b038274150e5',
+ 'question', 'Are assessments free or paid?',
+ 'MoodScale offers free assessments such as GAD-7, PHQ-9, and BFI-10, plus premium assessments for deeper clinical insights.',
+ 'https://moodscale.in/open-assessments', 1, true),
+
+('253350b8-23f2-4874-af01-3ce5acfed074', '76cd41ce-4ef0-4325-a12a-b038274150e5',
+ 'question', 'How long do assessments take?',
+ 'Most assessments take 5–20 minutes depending on the tool. Duration is shown on each assessment card before you begin.',
+ 'https://moodscale.in/open-assessments', 2, true),
+
+('5f9ce6ac-ce29-4362-ab1b-bac6020da273', '76cd41ce-4ef0-4325-a12a-b038274150e5',
+ 'question', 'Can I discuss my results with a therapist?',
+ 'Yes. Share your assessment results with a MoodScale psychologist to build a personalised treatment plan.',
+ 'https://moodscale.in/open-assessments', 3, true),
+
+('39d5b025-024e-4b91-ae9d-5fabcd93c33a', '76cd41ce-4ef0-4325-a12a-b038274150e5',
+ 'question', 'Are MoodScale assessments scientifically validated?',
+ 'Yes. Our assessments use established psychological frameworks and are designed by mental health professionals.',
+ 'https://moodscale.in/open-assessments', 4, true),
+
+-- ─────────────────────────────────────────────────────────
+-- FAQs → Cancellations and Refunds
+-- ─────────────────────────────────────────────────────────
+
+('eabbdca5-e829-46ca-af02-653f84f1c0b6', '51b3af37-9489-42c5-ae1d-9745391c0cd4',
+ 'subcategory', 'Cancellations and Refunds', null,
+ 'https://moodscale.in/policies/refund-policy', 2, true),
+
+('4d6548eb-3f0b-400f-a492-e8fefbbcd325', 'eabbdca5-e829-46ca-af02-653f84f1c0b6',
+ 'question', 'What is MoodScale''s cancellation policy?',
+ 'Sessions can be rescheduled or cancelled according to our service delivery policy. Please cancel at least 24 hours before your scheduled session to avoid charges.',
+ 'https://moodscale.in/policies/refund-policy', 0, true),
+
+('cc6e19dc-ef45-4705-ab66-d901cb302261', 'eabbdca5-e829-46ca-af02-653f84f1c0b6',
+ 'question', 'How do I cancel or reschedule a session?',
+ 'Cancel or reschedule through your MoodScale dashboard or by contacting support at contact@moodscale.in or +91 9145607891.',
+ 'https://moodscale.in/policies/refund-policy', 1, true),
+
+('5e533439-0abe-4b30-a7c0-4497c66ce655', 'eabbdca5-e829-46ca-af02-653f84f1c0b6',
+ 'question', 'Am I eligible for a refund?',
+ 'Refund eligibility depends on your plan and timing of cancellation. See our Refund Policy for full details.',
+ 'https://moodscale.in/policies/refund-policy', 2, true),
+
+('e6bab8f8-ecee-423b-af70-bdba05d296e9', 'eabbdca5-e829-46ca-af02-653f84f1c0b6',
+ 'question', 'What if my therapist cancels the session?',
+ 'If your therapist cancels, you will receive a full credit or the option to reschedule at no additional cost.',
+ 'https://moodscale.in/policies/refund-policy', 3, true),
+
+('b6bf35e0-cfbe-4889-ab84-1348d12ac05c', 'eabbdca5-e829-46ca-af02-653f84f1c0b6',
+ 'question', 'How long do refunds take to process?',
+ 'Approved refunds are typically processed within 5–7 business days to your original payment method.',
+ 'https://moodscale.in/policies/refund-policy', 4, true),
+
+-- ─────────────────────────────────────────────────────────
+-- GET IN TOUCH
+-- ─────────────────────────────────────────────────────────
+
+('888f2f3f-07e9-4844-a06d-c791187df1de', '6fc61628-1d4d-4994-a07e-251fa089c40c',
+ 'question', 'Contact Form',
+ 'Send us a message through the MoodScale contact form and our team will respond within 24 hours.',
+ 'https://moodscale.in/#contact', 0, true),
+
+('6868c8e6-425a-4107-a273-df048dacdaef', '6fc61628-1d4d-4994-a07e-251fa089c40c',
+ 'question', 'Call Us',
+ 'Speak with our team Monday–Friday, 9:00 AM–8:00 PM at +91 9145607891.',
+ 'https://moodscale.in/#contact', 1, true),
+
+('e797ce66-0673-4849-a1ef-4153cca35316', '6fc61628-1d4d-4994-a07e-251fa089c40c',
+ 'question', 'Email Us',
+ 'Email contact@moodscale.in for inquiries. We respond within 24 hours on business days.',
+ 'https://moodscale.in/#contact', 2, true);
