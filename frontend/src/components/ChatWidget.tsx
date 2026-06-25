@@ -106,15 +106,14 @@ export default function ChatWidget() {
           type="button"
           onClick={openChat}
           aria-label="Open MoodScale Assistant"
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--ms-navy)] text-white shadow-lg transition hover:bg-[var(--ms-navy-dark)] hover:shadow-xl"
-        >
+          className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--ms-navy)] text-white shadow-lg transition hover:bg-[var(--ms-navy-dark)] hover:shadow-xl"        >
           <ChatIcon />
         </button>
       )}
 
       {/* Chat panel */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 flex h-[520px] w-[360px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl sm:w-[380px]">
+        <div className="fixed bottom-4 right-4 left-4 z-50 flex h-[70vh] max-h-[520px] w-auto max-w-[380px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl md:bottom-6 md:right-6 md:left-auto md:h-[520px] md:w-[380px] ">
 
           {/* Header */}
           <header className="flex items-center justify-between bg-[var(--ms-navy)] px-4 py-3 text-white">

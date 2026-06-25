@@ -36,55 +36,45 @@ values
 -- ─────────────────────────────────────────────────────────
 
 -- Quick Book → Pricing  (subcategory)
-('qb-pricing-0001-0001-0001-000000000001', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
- 'subcategory', 'Pricing', null,
- 'https://moodscale.in/#pricing', 0, true),
+
+
 
 -- Quick Book → Essential  (question — direct top-level shortcut)
 ('2dc91c20-4c89-42e3-a7ef-ad86d36b04a6', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
  'question', 'Essential',
  'Essential Care at ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute therapy session, expert therapist matching, 24/7 email support, and post-session guidance. Ideal for trying therapy or addressing a specific concern.',
- 'https://moodscale.in/sessions/book-with-therapist', 1, true),
+ 'https://moodscale.in/sessions/book-with-therapist', 0, true),
 
 -- Quick Book → Premium  (question — direct top-level shortcut)
 ('c3ab66db-f4d1-4c11-ab6c-9b54b08e2b36', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
  'question', 'Premium',
  'Premium Journey at ₹3,999 per package (save 67% from ₹12,000). Includes 4 therapy sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support. Best for sustained progress over a month.',
- 'https://moodscale.in/sessions/book-with-therapist', 2, true),
+ 'https://moodscale.in/sessions/book-with-therapist', 1, true),
 
 -- Quick Book → Transformative  (question — direct top-level shortcut)
 ('fd505022-dc79-49e6-ac97-92be39e648fb', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
  'question', 'Transformative',
  'Transformative Care at ₹12,599 per program (save 50% from ₹25,000). Includes 12 therapy sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support. Designed for deep, long-term mental wellness transformation.',
- 'https://moodscale.in/sessions/book-with-therapist', 3, true),
+ 'https://moodscale.in/sessions/book-with-therapist', 2, true),
+
+ 
+ ('2eb29e48-8g37-24t5-ad82g42muty7', '71789c41-4266-4b4c-ae9e-ad6cc93e20a3',
+ 'question', 'Compare All Plans',
+ 'Essential Care: ₹1,199/session — 1 session, email support. Premium Journey: ₹3,999/package — 4 sessions + 1 assessment + wellness report + priority support. Transformative Care: ₹12,599/program — 12 sessions + 4 assessments + monthly & annual wellness reports + priority support. Same price for individuals and couples. No hidden fees.',
+ 'https://moodscale.in/#pricing', 3, true),
 
 -- ─────────────────────────────────────────────────────────
 -- QUICK BOOK → PRICING CHILDREN
 -- ─────────────────────────────────────────────────────────
 
 -- Pricing → Essential
-('qb-pricing-ess-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
- 'question', 'Essential Care — ₹1,199 / session',
- 'Essential Care at ₹1,199 per session (save 52% from ₹2,500). Includes one 50-minute therapy session, expert therapist matching, 24/7 email support, and post-session guidance. Ideal for trying therapy or addressing a specific concern.',
- 'https://moodscale.in/sessions/book-with-therapist', 0, true),
 
 -- Pricing → Premium
-('qb-pricing-pre-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
- 'question', 'Premium Journey — ₹3,999 / package',
- 'Premium Journey at ₹3,999 per package (save 67% from ₹12,000). Includes 4 therapy sessions, 1 assessment session, a wellness report, personalised scheduling, and 24/7 priority support. Best for sustained progress over a month.',
- 'https://moodscale.in/sessions/book-with-therapist', 1, true),
 
 -- Pricing → Transformative
-('qb-pricing-tra-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
- 'question', 'Transformative Care — ₹12,599 / program',
- 'Transformative Care at ₹12,599 per program (save 50% from ₹25,000). Includes 12 therapy sessions, 4 psychometric assessments, monthly and annual wellness reports, and 24/7 priority support. Designed for deep, long-term mental wellness transformation.',
- 'https://moodscale.in/sessions/book-with-therapist', 2, true),
 
 -- Pricing → Compare Plans
-('qb-pricing-cmp-0001-0001-000000000001', 'qb-pricing-0001-0001-0001-000000000001',
- 'question', 'Compare All Plans',
- 'Essential Care: ₹1,199/session — 1 session, email support. Premium Journey: ₹3,999/package — 4 sessions + 1 assessment + wellness report + priority support. Transformative Care: ₹12,599/program — 12 sessions + 4 assessments + monthly & annual wellness reports + priority support. Same price for individuals and couples. No hidden fees.',
- 'https://moodscale.in/#pricing', 3, true),
+
 
 -- ─────────────────────────────────────────────────────────
 -- SERVICES → Therapy Sessions
