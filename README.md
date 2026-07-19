@@ -127,8 +127,7 @@ This project provided hands-on experience with:
 - Production deployment on Vercel
 
 ## Live Demo
-https://livesupportsystem.vercel.app/
-
+https://updated-chat-bot.vercel.app/
 ## Author
 
 **Isha Ranjan**
